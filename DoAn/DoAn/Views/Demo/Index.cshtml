@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+@section jsFooter{
+
+    <script src="~/assets/Client/js/controller/studen.js">
+    </script>
+}
+<div class="table-responsive">
+
+    <div ng-app="StudentApp" class="container">
+        <br />
+        <br />
+        <input type="text" placeholder="Search Student" ng-model="searchStudent" />
+        <br />
+        <div ng-controller="StudentController">
+            <table id="example" class="table table-bordered" height="120">
+                <tr ng-repeat="r in students | filter : searchStudent" >
+                    <td>{{r.UserName}}</td>
+                    <td>{{r.Name}}</td>
+                    <td> {{r.Address}}</td>
+                    <td><span ng-click="editEmployee(r)" ng-model="message" class="btnAdd">Edit</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+<div ng-show="message">
+    <p class="divHead">{{Action}} Employee</p>
+    <table>
+        <tr>
+            <td><b>Name</b></td>
+            <td>
+                <input type="text" ng-model="employeeName" />
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="button" class="btnAdd" value="Save" ng-click="AddUpdateEmployee()" />
+            </td>
+        </tr>
+    </table>
+</div>
+</div>

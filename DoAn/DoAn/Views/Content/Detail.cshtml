@@ -1,0 +1,27 @@
+﻿@model EFCore.DB.Content
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    <div class="content_top">
+        <div class="heading">
+            <h3>@Model.Name</h3>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+    <div class="section-group">
+        @Html.Raw(Model.Detail)
+        @*<ul>
+            @{
+                var tags = (List<EFCore.DB.Tag>)ViewBag.Tags;
+                foreach (var tag in tags)
+                {
+                    <li><a href="/tag/@tag.ID">@tag.Name</a></li>
+                }
+            }
+        </ul>*@
+    </div>
+</div>

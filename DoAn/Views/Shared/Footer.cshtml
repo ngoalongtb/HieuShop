@@ -1,0 +1,191 @@
+﻿@model List<EFCore.DB.Footer>
+@{
+    var Type = (List<EFCore.DB.TypeFooter>)ViewBag.TypeFooter;
+    var tages = (List<EFCore.DB.Tag>)ViewBag.tages;
+}
+@*@Html.Raw(Model.Content)*@
+<style type="text/css">
+    #footer {
+        width: 100%;
+        margin: 0 auto;
+        background: #F6F6F6;
+        margin-top: 5px;
+        font-size: 13px;
+        height: 400px;
+    }
+
+    #cnt_footer {
+        width: 1170px;
+        margin: 0 auto;
+        text-align: left;
+        color: #959595;
+        line-height: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    #menu_footer {
+        float: left;
+        width: 1170px;
+        padding-bottom: 30px;
+    }
+
+    .menu_footer_item {
+        float: left;
+        width: 195px;
+        line-height: 25px;
+    }
+
+    .menu_footer_title {
+        width: 170px;
+        border-bottom: 2px solid #D7D7D7;
+        padding-bottom: 2px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    .menu_footer_cnt a {
+        color: #959595;
+    }
+
+    .submit {
+        color: White;
+        background-color: #ACACAC;
+        border-style: None;
+        margin-top: 10px;
+        float: right;
+        line-height: 20px;
+    }
+
+    .text-box {
+        color: #ACACAC;
+        border-style: None;
+        height: 20px;
+        width: 95%;
+        padding-left: 5%;
+        line-height: 20px;
+    }
+
+    .footer-tt {
+        padding-top: 3%;
+        width: 1170px;
+        float: left;
+        border-bottom: 1px solid #D7D7D7;
+        padding-bottom: 3px;
+    }
+    #footer p {
+    line-height: 25px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+}
+    .menu_footer_cnt a:hover{
+        color:red;
+    }
+    .top-footer{
+        background: #F6F6F6; height: 160px; width: 100%; position: relative;
+            margin-top: 25px; margin-bottom: 0px; border-top: 1px solid #EDEDED
+    }
+    .wrapper-slide{
+       padding-left: 21%;
+        width:80%;
+    }
+    .tt-giaonhan-title{
+        text-align:center;
+    }
+    .tt-giaonhan{float: left;
+    width: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    text-align: center;}
+</style>
+<div id="footer">
+    <div class="top-footer">
+        <div class="wrapper-slide">
+            <div class="tt-giaonhan">
+            <div class="tt-giaonhan-img">
+                <img alt="Miễn phí vận chuyển" src="~/assets/Client/images/sv1.png">
+                </div>
+            <div class="tt-giaonhan-title">
+                <b>Miễn phí vận chuyển</b>
+                </div>
+            </div>
+            <div class="tt-giaonhan">
+                <div class="tt-giaonhan-img">
+                    <img alt="Miễn phí vận chuyển" src="~/assets/Client/images/sv2.png">
+                </div>
+                <div class="tt-giaonhan-title">
+                    <b>Đổi trả thoải mãi</b>
+                </div>
+            </div>
+            <div class="tt-giaonhan">
+                <div class="tt-giaonhan-img">
+                    <img alt="Miễn phí vận chuyển" src="~/assets/Client/images/sv1.png">
+                </div>
+                <div class="tt-giaonhan-title">
+                    <b>Thanh toán tiện lợi</b>
+                </div>
+            </div>
+            </div>
+        </div>
+    <div id="cnt_footer">
+
+        @foreach (var i in Type)
+        {
+            <div class="menu_footer_item">
+                <div class="menu_footer_title">
+                    @i.Name
+                </div>
+                @foreach (var item in Model)
+                {
+                    <div class="menu_footer_cnt">
+                        <a href="">
+                            @if (item.Type == i.ID)
+                            {@item.Content}
+                    </a>
+                </div>
+                }
+            </div>
+        }
+        <div class="menu_footer_item">
+            <div class="menu_footer_title">
+                Đăng ký nhận tin
+            </div>
+            <div class="menu_footer_cnt">
+                <input class="text-box" type="text" value="Nhập địa chỉ Email" onblur="if (this.value == '') { this.value = 'Nhập địa chỉ Email' }" onfocus="if (this.value == 'Nhập địa chỉ Email') {this.value = '';}"><br />
+                <input class="submit" type="submit" value="Đăng ký">
+            </div>
+
+        </div>
+        <div class="footer-tt">
+            Thông tin doanh nghiệp : <span style="color: #000">Cây xinh Thảo Phương</span>
+        </div>
+        <div style="width: 1170px; float: left">
+            <table border="0" cellpadding="5">
+                <tr>
+                    <td > Địa chỉ: </td>
+                    <td style="width: 250px">
+                        <p>Thị trấn Đông Anh - Hà Nội</p>
+                        <p>Website: cayxinhthaophuong.com</p>
+                    </td>
+                    <td  style="width: 250px">
+                        <p>mã số doanh nghiệp:0105942167</p>
+                        <p>Đăng ký: Ngày 16 tháng 07 năm 2013</p>
+                    </td>
+                    <td  style="width: 250px">
+                        <p>Điện thoại: </p> <span style="color: #000">04 3634 1004 - 04 3634 0325</span>
+                        <p> Email: hchieu1995@gmail.com</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="width: 1170px; float: left; padding-top: 10px; border-top: 1px solid #EBEBEB;
+        line-height: 25px; margin-top: 10px">
+            Tags:
+            @foreach (var item in tages) { 
+            <span style="padding-right: 5px"><a style="text-decoration: none; color: #7C7C7C;" href="">@item.Name</a></span>}
+        </div>
+    </div>
+</div>

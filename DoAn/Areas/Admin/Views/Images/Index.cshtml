@@ -1,0 +1,120 @@
+﻿@model IEnumerable<EFCore.DB.Images>
+@{
+    ViewBag.Title = "Danh mục hình ảnh";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section header{
+    Danh mục hình ảnh
+}
+@section jsFooter{
+    <script src="~/assets/admin/user/js/Images.js"></script>
+}
+<style type="text/css">
+    .container {
+        margin-top: 20px;
+    }
+
+    .image-preview-input {
+        position: relative;
+        overflow: hidden;
+        margin: 0px;
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+    }
+
+        .image-preview-input input[type=file] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+
+    .image-preview-input-title {
+        margin-left: 2px;
+    }
+
+    .input-group-btn {
+        float: left;
+    }
+
+    #popover674393 {
+        left: 0px;
+    }
+</style>
+
+
+<div class="horz-grid">
+    <button type="button" class="btn btn-primary" id="new">Thêm mới</button>
+    <div class="gallery">
+        @foreach (var item in Model)
+        {
+            <div class="col-md">
+                <div class="gallery-img">
+                    <a href="~/assets/Admin/images/@item.Name" class="b-link-stripe b-animate-go  swipebox" title="@item.Title">
+                        <img class="img-responsive " src="~/assets/Admin/images/@item.Name" alt="" />
+                        <span class="zoom-icon"> </span>
+                    </a>
+                </div>
+                <div class="text-gallery">
+                    <a style="margin-left:4%;float:right" href="#">
+                        <span class="glyphicon glyphicon-floppy-remove"></span>
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@using (Html.BeginForm("Create", "Images", null, FormMethod.Post,
+                              new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="poupop" style="margin-right:50%">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Thêm mới</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <!-- image-preview-filename input [CUT FROM HERE]-->
+                                <div class="input-group image-preview">
+                                    <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                                    <span class="input-group-btn">
+                                        <!-- image-preview-clear button -->
+                                        <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                                            <span class="glyphicon glyphicon-remove"></span> Clear
+                                        </button>
+                                        <!-- image-preview-input -->
+                                        <div class="btn btn-default image-preview-input">
+                                            <span class="glyphicon glyphicon-folder-open"></span>
+                                            <span class="image-preview-input-title">Browse</span>
+                                            <input type="file" accept="image/png, image/jpeg, image/gif" name="file" /> <!-- rename it -->
+                                        </div>
+                                    </span>
+                                </div><!-- /input-group image-preview [TO HERE]-->
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-success" id="save-image">Save</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+}

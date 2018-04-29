@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var STT = 1;
+}
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td>STT</td>
+        <td>Hiển thị</td>
+        <td>Đường dẫn</td>
+        <td>Display Order</td>
+        <td>Target</td>
+        <td>Trạng thái hiển thị</td>
+        <td>Kiểu menu</td>
+        <td></td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@(STT++)</td>
+            <td>@item.Text</td>
+            <td>@item.Link</td>
+            <td>@item.DisplayOrder</td>
+            <td>@item.Target</td>
+            <td>
+                @if (item.Status)
+                {
+                    <span>Hiển thị</span>
+                }
+                else
+                {
+                    <span>Ẩn</span>
+                }
+            </td>
+            <td>
+                @if (item.TypeID == 1)
+                {
+                    <span>Top menu</span>
+                }
+                else
+                {
+                    <span>Main menu</span>
+                }
+            </td>
+            <td>
+                <a href="/Menu/Edit?id=+@item.ID">Sửa</a>
+                <a href="/Menu/Delete?id=+@item.ID">Xóa</a>
+            </td>
+        </tr>
+    }
+
+</table>

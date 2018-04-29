@@ -1,0 +1,60 @@
+D:\nam4\asp.net\DoAn\DoAn\EFCore\bin\Debug\EFCore.dll.config
+D:\nam4\asp.net\DoAn\DoAn\EFCore\bin\Debug\EFCore.dll
+D:\nam4\asp.net\DoAn\DoAn\EFCore\bin\Debug\EFCore.pdb
+D:\nam4\asp.net\DoAn\DoAn\EFCore\bin\Debug\EntityFramework.dll
+D:\nam4\asp.net\DoAn\DoAn\EFCore\bin\Debug\EntityFramework.SqlServer.dll
+D:\nam4\asp.net\DoAn\DoAn\EFCore\bin\Debug\EntityFramework.xml
+D:\nam4\asp.net\DoAn\DoAn\EFCore\bin\Debug\EntityFramework.SqlServer.xml
+D:\nam4\asp.net\DoAn\DoAn\EFCore\obj\Debug\EFCore.dll
+D:\nam4\asp.net\DoAn\DoAn\EFCore\obj\Debug\EFCore.pdb
+D:\nam4\asp.net\DoAn\DoAn\EFCore\bin\Debug\PagedList.dll
+D:\nam4\asp.net\DoAn\DoAn\EFCore\bin\Debug\PagedList.Mvc.dll
+D:\nam4\asp.net\DoAn\DoAn\EFCore\bin\Debug\PagedList.xml
+D:\nam4\asp.net\DoAn\DoAn\EFCore\bin\Debug\PagedList.Mvc.xml
+D:\nam4\asp.net\DoAn\DoAn\EFCore\obj\Debug\EFCore.csprojResolveAssemblyReference.cache
+C:\Users\VitLoveOc\Desktop\DoAn\DoAn\EFCore\bin\Debug\EFCore.dll.config
+C:\Users\VitLoveOc\Desktop\DoAn\DoAn\EFCore\bin\Debug\EFCore.dll
+C:\Users\VitLoveOc\Desktop\DoAn\DoAn\EFCore\bin\Debug\EFCore.pdb
+C:\Users\VitLoveOc\Desktop\DoAn\DoAn\EFCore\bin\Debug\EntityFramework.dll
+C:\Users\VitLoveOc\Desktop\DoAn\DoAn\EFCore\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\VitLoveOc\Desktop\DoAn\DoAn\EFCore\bin\Debug\PagedList.dll
+C:\Users\VitLoveOc\Desktop\DoAn\DoAn\EFCore\bin\Debug\PagedList.Mvc.dll
+C:\Users\VitLoveOc\Desktop\DoAn\DoAn\EFCore\bin\Debug\EntityFramework.xml
+C:\Users\VitLoveOc\Desktop\DoAn\DoAn\EFCore\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\VitLoveOc\Desktop\DoAn\DoAn\EFCore\bin\Debug\PagedList.xml
+C:\Users\VitLoveOc\Desktop\DoAn\DoAn\EFCore\bin\Debug\PagedList.Mvc.xml
+C:\Users\VitLoveOc\Desktop\DoAn\DoAn\EFCore\obj\Debug\EFCore.csprojResolveAssemblyReference.cache
+C:\Users\VitLoveOc\Desktop\DoAn\DoAn\EFCore\obj\Debug\EFCore.dll
+C:\Users\VitLoveOc\Desktop\DoAn\DoAn\EFCore\obj\Debug\EFCore.pdb
+C:\Users\HieuHC\Desktop\New folder\DoAn\DoAn\EFCore\bin\Debug\EFCore.dll.config
+C:\Users\HieuHC\Desktop\New folder\DoAn\DoAn\EFCore\bin\Debug\EFCore.dll
+C:\Users\HieuHC\Desktop\New folder\DoAn\DoAn\EFCore\bin\Debug\EFCore.pdb
+C:\Users\HieuHC\Desktop\New folder\DoAn\DoAn\EFCore\bin\Debug\EntityFramework.dll
+C:\Users\HieuHC\Desktop\New folder\DoAn\DoAn\EFCore\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HieuHC\Desktop\New folder\DoAn\DoAn\EFCore\bin\Debug\PagedList.dll
+C:\Users\HieuHC\Desktop\New folder\DoAn\DoAn\EFCore\bin\Debug\PagedList.Mvc.dll
+C:\Users\HieuHC\Desktop\New folder\DoAn\DoAn\EFCore\bin\Debug\EntityFramework.xml
+C:\Users\HieuHC\Desktop\New folder\DoAn\DoAn\EFCore\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HieuHC\Desktop\New folder\DoAn\DoAn\EFCore\bin\Debug\PagedList.xml
+C:\Users\HieuHC\Desktop\New folder\DoAn\DoAn\EFCore\bin\Debug\PagedList.Mvc.xml
+C:\Users\HieuHC\Desktop\New folder\DoAn\DoAn\EFCore\obj\Debug\EFCore.csprojResolveAssemblyReference.cache
+C:\Users\HieuHC\Desktop\New folder\DoAn\DoAn\EFCore\obj\Debug\EFCore.csproj.CoreCompileInputs.cache
+C:\Users\HieuHC\Desktop\New folder\DoAn\DoAn\EFCore\obj\Debug\EFCore.csproj.CopyComplete
+C:\Users\HieuHC\Desktop\New folder\DoAn\DoAn\EFCore\obj\Debug\EFCore.dll
+C:\Users\HieuHC\Desktop\New folder\DoAn\DoAn\EFCore\obj\Debug\EFCore.pdb
+C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\bin\Debug\EFCore.dll.config
+C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\bin\Debug\EFCore.dll
+C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\bin\Debug\EFCore.pdb
+C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\bin\Debug\EntityFramework.dll
+C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\bin\Debug\PagedList.dll
+C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\bin\Debug\PagedList.Mvc.dll
+C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\bin\Debug\EntityFramework.xml
+C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\bin\Debug\PagedList.xml
+C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\bin\Debug\PagedList.Mvc.xml
+C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\obj\Debug\EFCore.csprojResolveAssemblyReference.cache
+C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\obj\Debug\EFCore.csproj.CoreCompileInputs.cache
+C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\obj\Debug\EFCore.csproj.CopyComplete
+C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\obj\Debug\EFCore.dll
+C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\obj\Debug\EFCore.pdb
