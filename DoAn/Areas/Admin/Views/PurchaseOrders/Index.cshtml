@@ -1,0 +1,110 @@
+﻿@model IEnumerable<EFCore.DB.PurchaseOrder>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>
+
+    @section header{
+        Thể Loại
+    }
+</h2>
+@section jsFooter{
+    <script src="~/assets/admin/user/js/Categories.js"></script>
+}
+
+<div class="horz-grid">
+    <div class="panel panel-default">
+        <div class="panel-heading" style="font-family: initial; font-size: 19px; color: #b73333;">
+            Danh sách loại sản phẩm
+        </div>
+
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+            @using (Html.BeginForm("Index", "PurchaseOrders", FormMethod.Get))
+            {
+                <div class="row form-group">
+                    <div class="col-lg-12">
+                        <div class="col-md-4">
+                            <input type="text" value="@ViewBag.SearchString" class="form-control" placeholder="Nhập thông tin tìm kiếm" name="searchString" />
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-success">Tìm kiếm</button>
+                            <a class="btn btn-primary" href="/Admin/PurchaseOrders/Create">Thêm mới</a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.CreatedDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Vendor)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.VendorAddress)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Payment)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Ship)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CreatedDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Vendor)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.VendorAddress)
+                                </td>
+                                <td>
+                                    @if (item.Payment == null)
+                                    {
+                                        @Html.ActionLink("Thanh toán", "Payments", new { id = item.ID })
+                                    }
+                                    else
+                                    {
+                                        @Html.DisplayFor(modelItem => item.Payment)
+                                    }
+                                </td>
+                                <td>
+                                    @if (item.Ship == null)
+                                    {
+                                        @Html.ActionLink("Giao hàng", "Ship", new { id = item.ID })
+                                    }
+                                    else
+                                    {
+                                        @Html.DisplayFor(modelItem => item.Ship)
+                                    }
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.table-responsive -->
+        </div>
+        <!-- /.panel-body -->
+    </div>
+</div>

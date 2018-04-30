@@ -101,6 +101,13 @@
                     </div>
                 </div>
             }
+            @if (ViewBag.Message != null)
+            {
+                <div class="alert alert-danger">
+                    @ViewBag.Message
+                </div>
+            }
+            
             <div class="table-responsive">
                 <table id="example" class="table table-bordered" height="120">
                     <thead>
@@ -124,9 +131,11 @@
                                 Email
                             </th>
                             <th>
-                                Trạng thái
+                                Thanh toán
                             </th>
-
+                            <th>
+                                Giao hàng
+                            </th>
                             <th>#</th>
                         </tr>
                     </thead>
@@ -153,9 +162,25 @@
                                     @Html.DisplayFor(modelItem => item.ShipEmail)
                                 </td>
                                 <td>
-                                    <a href="#" class="btn-active-status" data-id="@item.ID">@Html.Raw(item.Status == true ? "<strong>Đã xử lý</strong>" : "Xử lý")</a>
+                                    @if (item.Payment == null)
+                                    {
+                                        @Html.ActionLink("Thanh toán", "Payments", new { id = item.ID })
+                                    }
+                                    else
+                                    {
+                                        @Html.DisplayFor(modelItem => item.Payment)
+                                    }
                                 </td>
-
+                                <td>
+                                    @if (item.Ship == null)
+                                    {
+                                        @Html.ActionLink("Giao hàng", "Ship", new { id = item.ID })
+                                    }
+                                    else
+                                    {
+                                        @Html.DisplayFor(modelItem => item.Ship)
+                                    }
+                                </td>
                                 <td>
                                     <input type="button" class="glyphicon glyphicon-pencil" onclick="Edit()" id="Edit_@item.ID" />
                                     @Html.ActionLink(" ", "Edit", new { id = item.ID }, new { @class = "glyphicon glyphicon-pencil" }) |

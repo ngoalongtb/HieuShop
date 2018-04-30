@@ -9,6 +9,11 @@ namespace EFCore.DB
     [Table("Product")]
     public partial class Product
     {
+        public Product()
+        {
+            PurchaseOrderDetails = new HashSet<PurchaseOrderDetail>();
+        }
+
         public long ID { get; set; }
 
         [StringLength(250)]
@@ -64,5 +69,8 @@ namespace EFCore.DB
         public DateTime? TopHot { get; set; }
 
         public int? ViewCount { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PurchaseOrderDetail> PurchaseOrderDetails { get; set; }
     }
 }

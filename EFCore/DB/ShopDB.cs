@@ -36,6 +36,9 @@ namespace EFCore.DB
         public virtual DbSet<UserGroup> UserGroup { get; set; }
         public virtual DbSet<advertisement> advertisement { get; set; }
         public virtual DbSet<Answer> Answer { get; set; }
+        public virtual DbSet<PurchaseOrder> PurchaseOrder { get; set; }
+        public virtual DbSet<PurchaseOrderDetail> PurchaseOrderDetail { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<OrderDetail>()
@@ -52,6 +55,17 @@ namespace EFCore.DB
             modelBuilder.Entity<Product>()
                 .Property(e => e.PromotionPrice)
                 .HasPrecision(18, 0);
+
+            modelBuilder.Entity<PurchaseOrder>()
+                .HasMany(e => e.PurchaseOrderDetails)
+                .WithRequired(e => e.PurchaseOrder)
+                .HasForeignKey(e => e.PurchaseOrderID);
+
+            modelBuilder.Entity<Product>()
+                .HasMany(e => e.PurchaseOrderDetails)
+                .WithRequired(e => e.Product)
+                .HasForeignKey(e => e.ProductID);
+
         }
     }
 }

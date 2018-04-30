@@ -29,5 +29,8 @@ namespace EFCore.DB
         public string ShipEmail { get; set; }
 
         public bool? Status { get; set; }
+
+        public DateTime? Payment { get; set; }
+        public DateTime? Ship { get; set; }
     }
 }

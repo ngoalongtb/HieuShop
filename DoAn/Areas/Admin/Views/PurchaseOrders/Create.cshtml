@@ -1,0 +1,157 @@
+﻿@model EFCore.DB.PurchaseOrder
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>
+
+    @section header{
+        Nhập hàng > Thêm mới
+    }
+</h2><div class="horz-grid">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Nhập hàng</h4>
+            <hr />
+            <div class="form-group">
+                @Html.LabelFor(model => model.Vendor, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Vendor, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Vendor, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.VendorAddress, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.VendorAddress, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.VendorAddress, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            
+            <hr />
+            <br />
+            <div class="row">
+                <div class="col-md-4 col-xs-6">
+                    <div class="form-group">
+                        <b class="control-label col-md-4"> Chọn sản phẩm</b>
+                        <div class="col-md-8">
+                            <input class="form-control autocomplete" placeholder="Nhập một ký tự" id="productId" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                    <div class="form-group">
+                        <b class="control-label col-md-4"> Số lượng</b>
+                        <div class="col-md-8">
+                            <input type="number" name="name" value="" id="productQty" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary" id="btnAddProduct">Thêm</button>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <br />
+
+            <table id="example1" class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            Tên sản phẩm
+                        </th>
+                        <th>
+                            Hình ảnh
+                        </th>
+                        <th>
+                            Giá
+                        </th>
+                        <th>
+                            Số lượng
+                        </th>
+                        <th>
+
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="loadMore">
+                </tbody>
+            </table>
+            <br />
+            <br />
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+
+@section jsFooter{
+    
+         <script>
+        var ltmApp = {};
+        $(function () {
+            var availableTags = [
+              "ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++",
+              "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran",
+              "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl",
+              "PHP", "Python", "Ruby", "Scala", "Scheme"
+            ];
+            $.get("/Admin/Products/ProductAPI", function (data) {
+                console.log(data);
+                $(".autocomplete").autocomplete({
+                    source: data
+                });
+            })
+        });
+
+        ltmApp.count = 0;
+
+         </script>
+         <script>
+        $("#btnAddProduct").click(function () {
+            var productId = $("#productId").val().split("-")[1];
+            var productQty = $("#productQty").val();
+            console.log(productId);
+            console.log(productQty);
+            $.get("/Admin/Products/ProductDetailAPI/" + productId, function (data) {
+                console.log("load oki");
+                console.log("data");
+                $("#loadMore").append(
+                    "<tr id='product_"+ltmApp.count +"'><td>" +
+                        data.Name  +
+                    "</td><td>" +
+                        "<img src='" + data.Image + "'" + " width='70px' height='70px' />" +
+                    "</td><td>" +
+                        data.Price +
+                    "</td><td>" +
+                        "<input type='number' class='form-control' name='PurchaseOrderDetails[" + ltmApp.count + "].Quantity' value='" + productQty + "'/>" +
+                        "<input type='hidden' name='PurchaseOrderDetails[" + ltmApp.count + "].ProductID' value='" + productId + "'/>" +
+                    "</td><td>" +
+                        "<a href='#' onclick='removeProduct("+ ltmApp.count +")'>Xóa</a>" +
+                    "</td></tr>");
+                ltmApp.count++;
+            })
+        });
+         </script>
+         <script>
+        function removeProduct(id) {
+            $("#product_" + id).remove();
+        }
+         </script>    
+}

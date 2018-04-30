@@ -4,6 +4,8 @@ using System.Web;
 using System.Web.Mvc;
 using EFCore.DB;
 using EFCore.Service;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace DoAn.Areas.Admin.Controllers
 {
@@ -138,5 +140,30 @@ namespace DoAn.Areas.Admin.Controllers
             var dao = new CategoriesSrvice();
             ViewBag.CategoryID = new SelectList(dao.ListAll(), "ID", "Name", selectedId);
         }
+
+        public ActionResult ProductAPI()
+        {
+            //.Select(x => new { x.Name, x.ID })
+            var products = db.Product.ToList();
+
+            List<string> result = new List<string>();
+            foreach (var item in products)
+            {
+                result.Add(item.Name + "-" + item.ID);
+            }
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult ProductDetailAPI(long? id)
+        {
+            Product product = db.Product.Find(id);
+            return Json(new
+            {
+                Name = product.Name,
+                Image = product.Image,
+                Price = product.Price,
+                Type = product.CategoryID
+            }, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

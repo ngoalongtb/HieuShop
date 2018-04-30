@@ -79,6 +79,8 @@
     <Compile Include="DB\OrderDetail.cs" />
     <Compile Include="DB\Product.cs" />
     <Compile Include="DB\ProductCategory.cs" />
+    <Compile Include="DB\PurchaseOrder.cs" />
+    <Compile Include="DB\PurchaseOrderDetail.cs" />
     <Compile Include="DB\Role.cs" />
     <Compile Include="DB\ShopDB.cs" />
     <Compile Include="DB\Slide.cs" />
@@ -100,6 +102,7 @@
     <Compile Include="Service\OrdersService.cs" />
     <Compile Include="Service\productCategoryService.cs" />
     <Compile Include="Service\ProductsService.cs" />
+    <Compile Include="Service\PurchaseOrderService.cs" />
     <Compile Include="Service\SlideService.cs" />
     <Compile Include="Service\TagesService.cs" />
     <Compile Include="Service\TypeFooterService.cs" />
