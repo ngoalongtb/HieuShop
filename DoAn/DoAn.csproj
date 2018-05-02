@@ -179,6 +179,7 @@
     <Compile Include="Areas\Admin\Controllers\ImagesController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\FooterController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PurchaseOrdersController.cs" />
     <Compile Include="Areas\Admin\Controllers\SlideController.cs" />
     <Compile Include="Areas\Admin\Controllers\OrdersController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductCategoriesController.cs" />
@@ -218,6 +219,7 @@
     <Content Include="assets\Admin\css\examples.css" />
     <Content Include="assets\Admin\css\font-awesome.css" />
     <Content Include="assets\Admin\css\graph.css" />
+    <Content Include="assets\Admin\css\jquery-ui.min.css" />
     <Content Include="assets\Admin\css\main.css" />
     <Content Include="assets\Admin\css\menu.css" />
     <Content Include="assets\Admin\css\owl.carousel.css" />
@@ -288,6 +290,8 @@
     <Content Include="assets\Admin\js\custom.js" />
     <Content Include="assets\Admin\js\data.js" />
     <Content Include="assets\Admin\js\gmaps.js" />
+    <Content Include="assets\Admin\js\jquery-migrate.min.js" />
+    <Content Include="assets\Admin\js\jquery-ui.min.js" />
     <Content Include="assets\Admin\js\jquery.calendario.js" />
     <Content Include="assets\Admin\js\jquery.flot.js" />
     <Content Include="assets\Admin\js\jquery.flot.pie.js" />
@@ -524,6 +528,11 @@
     <Content Include="Areas\Admin\Views\Footer\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Menu\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Menu\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\PurchaseOrders\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\PurchaseOrders\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\PurchaseOrders\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\PurchaseOrders\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\PurchaseOrders\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

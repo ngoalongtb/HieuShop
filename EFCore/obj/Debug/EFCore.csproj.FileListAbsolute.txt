@@ -58,3 +58,17 @@ C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\obj\Debug\EFCore.csproj.Cor
 C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\obj\Debug\EFCore.csproj.CopyComplete
 C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\obj\Debug\EFCore.dll
 C:\Users\HieuHC\Desktop\DoAnMoiNhat\DoAn\DoAn\EFCore\obj\Debug\EFCore.pdb
+C:\DATA\WORKSHOP\HieuShop\DoAn\EFCore\bin\Debug\EFCore.dll.config
+C:\DATA\WORKSHOP\HieuShop\DoAn\EFCore\bin\Debug\EFCore.dll
+C:\DATA\WORKSHOP\HieuShop\DoAn\EFCore\bin\Debug\EFCore.pdb
+C:\DATA\WORKSHOP\HieuShop\DoAn\EFCore\bin\Debug\EntityFramework.dll
+C:\DATA\WORKSHOP\HieuShop\DoAn\EFCore\bin\Debug\EntityFramework.SqlServer.dll
+C:\DATA\WORKSHOP\HieuShop\DoAn\EFCore\bin\Debug\PagedList.dll
+C:\DATA\WORKSHOP\HieuShop\DoAn\EFCore\bin\Debug\PagedList.Mvc.dll
+C:\DATA\WORKSHOP\HieuShop\DoAn\EFCore\bin\Debug\EntityFramework.xml
+C:\DATA\WORKSHOP\HieuShop\DoAn\EFCore\bin\Debug\EntityFramework.SqlServer.xml
+C:\DATA\WORKSHOP\HieuShop\DoAn\EFCore\bin\Debug\PagedList.xml
+C:\DATA\WORKSHOP\HieuShop\DoAn\EFCore\bin\Debug\PagedList.Mvc.xml
+C:\DATA\WORKSHOP\HieuShop\DoAn\EFCore\obj\Debug\EFCore.dll
+C:\DATA\WORKSHOP\HieuShop\DoAn\EFCore\obj\Debug\EFCore.pdb
+C:\DATA\WORKSHOP\HieuShop\DoAn\EFCore\obj\Debug\EFCore.csprojResolveAssemblyReference.cache
